@@ -1,0 +1,40 @@
+.botao{
+    background-color: white;
+    color: black;
+    padding: 5px 8px;
+    border: 1px solid rgb(75, 71, 71);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all .3s ease;
+    margin-top: 5px;
+}
+#centro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.botao:hover{
+    background-color: rgb(46, 46, 46);
+    color: white;
+    
+}
+
+.botao1{
+    background-color: white;
+    color: black;
+    padding: 5px 8px;
+    border: 1px solid rgb(75, 71, 71);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all .3s ease;
+}
+.botao1:hover{
+    background-color: rgb(75, 71, 71);
+    color: white;
+    
+}
