@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #292c35;
+}
+.botaopadrao{
+    background-color: white;
+    color: black;
+    padding: 5px 8px;
+    border: 1px solid rgb(75, 71, 71);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all .3s ease;
+    margin-top: 5px;
+}
+.botaopadrao:hover{
+    background-color: rgb(75,71,71);
+    color: white;
+    
+}
+#centro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%
+}

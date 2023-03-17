@@ -4,61 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade</title>
-    <link rel="stylesheet" href="Css/style.css">
-    <link rel="stylesheet" href="Css/botao.css">
-    <script type="text/javascript">
-        function calculo() {
-        var resp = parseFloat(prompt("Informe o primeiro cateto", ""))
-        if(resp){
-        var resp1 = parseFloat(prompt("Informe o segundo cateto", ""))
-        if(resp1){
-        var hipotenusa= parseFloat((resp1*resp1)+(resp*resp))
-        var hipotenusa2= parseInt(Math.sqrt(hipotenusa))
-        alert("A Hipotenusa é igual a: " +hipotenusa2);
-        }else{
-            alert("Até outro dia!")
-        }
-        }else{
-            alert("Até outro dia!")
-        }
-        }
-        function idade(){
-        var nasc = prompt ("Digite o ano de nascimento:", "")
-        if(nasc){
-        var atual = prompt ("Digite o ano atual:", "")
-        if(atual){
-            var id1 = atual - nasc
-                alert("Sua idade: " + id1)
-            var id2 = 2050 - nasc  
-             alert("Sua idade em 2050: " + id2)
-        }else{
-            alert("Até outro dia!")
-        } 
-        }else{
-            alert("Até outro dia!")
-        }
-    }
-
-    </script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Atividade Utilizando botões</title>
 </head>
 <body>
-    <div id="centralizar">
-    <div class="button">
-        <div class="ball"></div>
-    </div></div>
-    </body>
     <div id="centro">
-    <div>
-        <button type="button" onclick="idade()" class="botao1">Calcule a sua idade</button>
-    </div></div>
-    <div id="centro"><button type="button" onclick="calculo()" class="botao">Calcule a Hipotenusa</button></div>
-    <script>
-        document.querySelector('.ball').addEventListener('click', (e)=>{
-            e.target.classList.toggle('ball-move');
-            document.body.classList.toggle('dark');
-        });
-
-    </script>
+        <div>
+            <button type="button" onclick="idadeatual()" class="botaopadrao">Calcule a sua idade no ano atual</button>
+            <button type="button" onclick="idade50()" class="botaopadrao">Calcule a sua idade em 2050</button>
+        </div>
+    </div>
+    <div id="centro">
+        <button type="button" onclick="celsius()" class="botaopadrao">Calcule a temperatura em Fahrenheit</button>
+    </div>
+    <div id="centro">
+        <button type="button" onclick="mediaarit()" class="botaopadrao">Calcule a média aritmética</button>
+    </div>
+    <div id="centro">
+        <button type="button" onclick="Hip()" class="botaopadrao">Calcule a Hipotenusa</button>
+    </div>
 </body>
 </html>
