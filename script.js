@@ -23,7 +23,7 @@ function idade50(){
     }
     }
 function celsius(){
-    var celsius = parseFloat(prompt("Informe a temperatura em Celcius: ", ""))
+    var celsius = parseFloat(prompt("Informe a temperatura em Celsius: ", ""))
     if(celsius){
     var fahrenheit = parseFloat((celsius*1.8)+32)
     alert("a temperatura informada em Fahrenheit é: " +fahrenheit)
