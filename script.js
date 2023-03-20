@@ -60,7 +60,7 @@ function Hip(){
     if(resp1){
     var hipotenusa= parseFloat(Math.sqrt((resp1*resp1)+(resp*resp)))
     console.log("Catetos Informados: "+resp+" e "+resp1+"\nO Resultado da Hipotenusa é: "+hipotenusa)
-    alert("Catetos Informados: "+resp+" e "+resp1+"\nA Hipotenusa é igual a: " +hipotenusa);
+    alert("Catetos Informados: "+resp+" e "+resp1+"\nA Hipotenusa é: " +hipotenusa);
         }else{
         alert("Até outro dia!")
         }
