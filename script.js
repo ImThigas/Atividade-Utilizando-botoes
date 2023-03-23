@@ -1,82 +1,96 @@
-function idadeatual(){
-    var nasc = prompt ("Informe o seu ano de nascimento:", "")
-    if(nasc){ 
-        const date = new Date();
-        const currentYear = date.getFullYear();
-        parseInt(currentYear)
-        var id1 = currentYear - nasc
-        var id2 = 2050 - nasc
-        console.log("Data de nascimento informada: "+nasc+"\nIdade no ano atual: " +id1+ "\nIdade em 2050: " + id2)
-        alert("Data de nascimento informada: "+nasc+"\nSua idade no ano atual é: "+ id1+ "\nIdade em 2050: " + id2)
-    }else{
+function maquina(){
+    var valor = parseFloat(prompt("Informe o valor da compra: ", ""))
+    if(valor){
+    var pagamento = parseFloat(prompt("Informe o valor em reais que você pagará: ", ""))
+    if(pagamento){
+        if(pagamento>valor){
+            var troco = parseFloat(pagamento-valor)
+            var nota50=0, nota20=0, nota10=0, nota5=0, nota2=0, nota1=0
+            var trocofinal= parseFloat(troco)
+            for(let i=0; i<100; i++){
+                if(troco<50){
+                    i=100
+                }else{
+                    troco=troco-50
+                    nota50++
+                }
+            }
+            for(let j=0; j<100; j++){
+                if(troco<20){
+                    j=100
+                }else{
+                    troco=troco-20
+                    nota20++
+                }
+            }
+            for(let h=0; h<100; h++){
+                if(troco<10){
+                    h=100
+                }else{
+                    troco=troco-10
+                    nota10++
+                }
+            }
+            for(let k=0; k<100; k++){
+                if(troco<5){
+                    k=100
+                }else{
+                    troco=troco-5
+                    nota5++
+                }
+            } 
+            for(let l=0; l<100; l++){
+                if(troco<2){
+                    l=100
+                }else{
+                    troco=troco-2
+                    nota2++
+                }
+            }
+            for(let m=0; m<100; m++){
+                if(troco==0){
+                    m=100
+                }else{
+                    troco=troco-1
+                    nota1++
+                }
+            }
+            alert("Valor pago: R$ "+pagamento+"\nValor da compra: R$ "+valor+"\nTroco: R$ "+trocofinal+"\nNotas de R$ 50,00: "+nota50+"\nNotas de R$ 20,00: "+nota20+"\nNotas de R$ 10,00: "+nota10+"\nNotas de R$ 5,00: "+nota5+"\nNotas de R$ 2,00: "+nota2+"\nMoedas de R$ 1,00: "+nota1)
+        }else if(pagamento==valor){
+         alert("Compra efetuada com sucesso!")   
+            }else{
+            alert("A quantia paga é insuficiente para realizar a compra!")
+        }
+            }else{
+        alert("É necessário informar um valor para efetuar o pagamento.\nCompra cancelada!")
+        }
+            }else{
         alert("Até outro dia!")
-    }
+        }    
 }
-function salario(){
-    var salario1 = parseFloat(prompt("Informe o seu salário: ", ""))
-    if(salario1){
-    var salario25 = parseFloat(salario1+(salario1*0.25))
-    console.log("Salario Informado: "+salario1+"\nSeu salário com aumento de 25% é: " +salario25)
-    alert("Salario Informado: "+salario1+"\nSeu salário com aumento de 25% é: " +salario25)
-    }else{
-        alert("Até outro dia!")
-    }
-}
-function celsius(){
-    var celsius = parseFloat(prompt("Informe a temperatura em Celsius: ", ""))
-    if(celsius){
-    var fahrenheit = parseFloat((celsius*1.8)+32)
-    var kelvin = parseFloat(celsius+273.15)
-    console.log("A temperatura informada em celsius: "+celsius+"\nA temperatura em Fahrenheit é: " +fahrenheit+ "\nA temperatura em Kelvin é: "+kelvin)
-    alert("A temperatura informada em celsius: "+celsius+"\nA temperatura em Fahrenheit é: " +fahrenheit+ "\nA temperatura em Kelvin é: "+kelvin)
-    }else{
-        alert("Até outro dia!")
-    }
-}
-function mediaarit(){
-    var nota1 = parseFloat(prompt("Informe a primeira nota:", ""))
-    if(nota1){
-    var nota2 = parseFloat(prompt("Informe a segunda nota:", ""))
-    if(nota2){
-    var nota3 = parseFloat(prompt("Informe a terceira nota:", ""))
-    if(nota3){
-        var media = parseFloat((nota1+nota2+nota3)/3)
-        console.log("Notas informadas: "+nota1+", "+nota2+" e "+nota3+"\nA média das 3 notas é: " +media)
-        alert("Notas informadas: "+nota1+", "+nota2+" e "+nota3+"\nA média das 3 notas é: " +media)
-    }else{
-        alert("Até outro dia!")
-    }
-    }else{
-        alert("Até outro dia!")        
-    }
-    }else{
-        alert("Até outro dia!")
-    }
-}
-function Hip(){
-    var resp = parseFloat(prompt("Informe o primeiro cateto", ""))
-    if(resp){
-    var resp1 = parseFloat(prompt("Informe o segundo cateto", ""))
-    if(resp1){
-    var hipotenusa= parseFloat(Math.sqrt((resp1*resp1)+(resp*resp)))
-    console.log("Catetos Informados: "+resp+" e "+resp1+"\nO Resultado da Hipotenusa é: "+hipotenusa)
-    alert("Catetos Informados: "+resp+" e "+resp1+"\nA Hipotenusa é: " +hipotenusa);
+function imc(){
+    var peso = parseFloat(prompt("Informe o seu peso", ""))
+    if(peso){
+        var altura = parseFloat(prompt("Informe a sua altura: ", ""))
+        if(altura){
+            var valorfinal = parseFloat(peso/Math.pow(altura,2))
+            if(valorfinal<20){
+                alert("De acordo com a tabela IMC, sua situação é: Abaixo do peso")
+            }else if(valorfinal>=20 && valorfinal<25){
+                alert("De acordo com a tabela IMC, sua situação é: Normal")
+            }else if(valorfinal>=25 && valorfinal<30){
+                alert("De acordo com a tabela IMC, sua situação é: Sobrepeso")
+            }else if(valorfinal>=30 && valorfinal<35){
+                alert("De acordo com a tabela IMC, sua situação é: Obesidade grau I")
+            }else if(valorfinal>=35 && valorfinal<40){
+                alert("De acordo com a tabela IMC, sua situação é: Obesidade grau II")
+            }else{
+                alert("De acordo com a tabela IMC, sua situação é: Obesidade grau III")
+            }
         }else{
         alert("Até outro dia!")
         }
         }else{
         alert("Até outro dia!")
         }
-}
-function ultimo(){
-    var raio = parseFloat(prompt("Informe o raio da esfera: ", ""))
-    if(raio){
-        var comprimento = parseFloat(2*Math.PI*raio)
-        var area= parseFloat(Math.PI*Math.pow(raio,2))
-        var volume= parseFloat(4*Math.PI*Math.pow(raio,3)/3)
-        console.log("Raio Informado: "+raio+"\nO comprimento da esfera de raio "+raio+" é: "+comprimento+"\nA área de uma esfera de raio "+raio+" é: "+area+"\nO volume de uma esfera de raio "+raio+" é: "+volume)
-        alert("Raio Informado: "+raio+"\nO comprimento da esfera de raio "+raio+" é: "+comprimento+"\nA área de uma esfera de raio "+raio+" é: "+area+"\nO volume de uma esfera de raio "+raio+" é: "+volume)
-    }else{
-        alert("Até outro dia!")
-    }
 }
